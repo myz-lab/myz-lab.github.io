@@ -1,0 +1,64 @@
+---
+layout: default
+title: Home
+lang: en
+hero: true
+---
+<section class="hero">
+  {% include pixel-grid.html %}
+  <div class="shell hero-inner">
+    <p class="hero-kicker">KANAGAWA INSTITUTE OF TECHNOLOGY</p>
+    <h1>Image processing<br>that supports people</h1>
+    <p class="hero-copy">The Image Information Processing Systems Lab (Miyazaki Lab) combines image processing and artificial intelligence to build systems for communication support and everyday social challenges.</p>
+  </div>
+</section>
+
+<section class="block tint" id="research">
+  <div class="shell">
+    <p class="label">RESEARCH</p>
+    <h2>Research Topics</h2>
+    <div class="themes">
+      <div class="theme-row"><div>
+        <h3>Reading words from lip movements</h3>
+        <p>Machine lip-reading and speech video generation to support communication between people with hearing impairments and hearing people. Our lip-reading training app for iPhone and iPad, <a href="{{ site.dokuwa_club }}"><em>Dokuwa Club</em></a>, is publicly available.</p>
+      </div></div>
+      <div class="theme-row"><div>
+        <h3>Recognition technology for daily life</h3>
+        <p>Real-time object detection and tracking applied to practical problems such as automated waste sorting.</p>
+      </div></div>
+      <div class="theme-row"><div>
+        <h3>Treating sound as an image</h3>
+        <p>Sound is converted into spectrogram images so that image-processing AI can remove unwanted noise from audio and video.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faculty">
+  <div class="shell">
+    <p class="label">FACULTY</p>
+    <h2>Faculty</h2>
+    <div class="person">
+      <div>
+        <p class="person-name">Tsuyoshi Miyazaki<small>宮崎 剛</small></p>
+        <p class="person-role">Professor, Ph.D. in Engineering</p>
+        <dl class="facts">
+          <dt>Fields</dt><dd>Image information processing, artificial intelligence, assistive technology</dd>
+          <dt>Societies</dt><dd>IPSJ, IEICE, IIEEJ, JSiSE</dd>
+          <dt>Email</dt><dd>{{ site.email }}</dd>
+        </dl>
+      </div>
+      <div class="actions">
+        <a class="btn" href="{{ site.researchmap }}">Publications (researchmap)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint" id="contact">
+  <div class="shell">
+    <p class="label">CONTACT</p>
+    <h2>Contact</h2>
+    <p>Department of Information Engineering, Faculty of Information Technology, Kanagawa Institute of Technology<br>{{ site.address_en }}<br>Email: {{ site.email }}</p>
+  </div>
+</section>

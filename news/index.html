@@ -1,0 +1,26 @@
+---
+layout: default
+title: ニュース
+---
+<div class="page-head">
+  <div class="shell">
+    <p class="label">NEWS</p>
+    <h1>ニュース</h1>
+    <p>研究室の活動、学会発表、受賞などを掲載しています。</p>
+  </div>
+</div>
+
+<div class="shell page-body">
+  {%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {%- for year in years %}
+  <h2 class="year">{{ year.name }}</h2>
+  <ul class="news-cards">
+    {%- for post in year.items %}
+    <li><a href="{{ post.url | relative_url }}">
+      <span class="news-date">{% if post.date_display == "month" %}{{ post.date | date: "%Y/%m" }}{% else %}{{ post.date | date: "%Y/%m/%d" }}{% endif %}<span class="news-kind">{{ post.category_label }}</span></span>
+      <span class="news-title">{{ post.title }}</span>
+    </a></li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</div>

@@ -1,0 +1,114 @@
+---
+layout: default
+title: トップ
+hero: true
+---
+<section class="hero">
+  {% include pixel-grid.html %}
+  <div class="shell hero-inner">
+    <p class="hero-kicker">IMAGE INFORMATION PROCESSING SYSTEMS LAB</p>
+    <h1>画像の力で、<br>人と社会を支える</h1>
+    <p class="hero-copy">画像処理と人工知能を組み合わせ、聴覚に障がいのある方とのコミュニケーションや、暮らしの身近な課題に役立つシステムをつくっています。</p>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="shell">
+    <p class="label">ABOUT</p>
+    <h2>画像情報処理システム研究室について</h2>
+    <p class="intro">この研究室では、「画像情報処理で何ができるか」を出発点に、研究成果を実際に使える形にすることを大切にしています。口の動きを読み取る技術を読話の練習アプリとして公開したり、物体認識をごみの分別に役立てたりと、社会の中で使われることを目指した研究を進めています。</p>
+  </div>
+</section>
+
+<section class="block tint" id="research">
+  <div class="shell">
+    <p class="label">RESEARCH</p>
+    <h2>研究紹介</h2>
+    <div class="themes">
+      <div class="theme-row">
+        <div>
+          <h3>口の動きから言葉を読み取る</h3>
+          <p>機械読唇と発話映像の生成によって、聴覚障がい者と健聴者のやりとりを支えます。研究成果は、読話を練習できるiPhone・iPadアプリ「<a href="{{ site.dokuwa_club }}">読話クラブ</a>」として公開しています。</p>
+        </div>
+      </div>
+      <div class="theme-row">
+        <div>
+          <h3>認識技術を暮らしの中へ</h3>
+          <p>カメラ映像の中の物体をリアルタイムに検出・追跡し、ごみの自動分別など、身の回りの課題の解決に活かします。</p>
+        </div>
+      </div>
+      <div class="theme-row">
+        <div>
+          <h3>音を「画像」として扱う</h3>
+          <p>音をスペクトログラムという画像に変換し、画像処理のAIで、映像や音声から不要な音を取り除きます。</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px"><a class="text-link" href="{{ '/research/' | relative_url }}">研究の詳しい内容を見る</a></p>
+  </div>
+</section>
+
+<section class="block" id="news">
+  <div class="shell">
+    <p class="label">NEWS</p>
+    <h2>ニュース</h2>
+    <ul class="news-cards">
+      {%- for post in site.posts limit: 4 %}
+      <li><a href="{{ post.url | relative_url }}">
+        <span class="news-date">{% if post.date_display == "month" %}{{ post.date | date: "%Y/%m" }}{% else %}{{ post.date | date: "%Y/%m/%d" }}{% endif %}<span class="news-kind">{{ post.category_label }}</span></span>
+        <span class="news-title">{{ post.title }}</span>
+      </a></li>
+      {%- endfor %}
+    </ul>
+    <a class="text-link" href="{{ '/news/' | relative_url }}">過去のニュースを見る</a>
+  </div>
+</section>
+
+<section class="block tint" id="faculty">
+  <div class="shell">
+    <p class="label">FACULTY</p>
+    <h2>教員紹介</h2>
+    <div class="person">
+      <div>
+        <p class="person-name">宮崎 剛<small>Tsuyoshi Miyazaki</small></p>
+        <p class="person-role">教授／博士（工学）</p>
+        <dl class="facts">
+          <dt>専門分野</dt><dd>画像情報処理、人工知能、福祉情報工学</dd>
+          <dt>所属学会</dt><dd>情報処理学会、電子情報通信学会、画像電子学会、教育システム情報学会</dd>
+          <dt>メール</dt><dd>{{ site.email }}</dd>
+        </dl>
+      </div>
+      <div class="actions">
+        <a class="btn" href="{{ site.researchmap }}">業績一覧（researchmap）</a>
+        <a class="btn ghost" href="{{ site.university_page }}">研究室ナビ（大学公式）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="students">
+  <div class="shell">
+    <p class="label">FOR STUDENTS</p>
+    <h2>学生の皆さんへ</h2>
+    <p class="intro">画像や映像を扱うプログラムを自分の手で書き、動くものをつくりながら研究を進めます。テーマは、一人ひとりの興味に合わせて一緒に決めます。</p>
+    <ul class="steps">
+      <li><strong>テーマを決める</strong>興味のある分野から、取り組む課題を相談して決めます。</li>
+      <li><strong>つくって試す</strong>プログラムを実装し、実験で効果を確かめます。</li>
+      <li><strong>伝える</strong>卒業研究発表や学会で、成果を発表します。</li>
+    </ul>
+    <p>研究室の見学は随時受け付けています。教員紹介にあるメールアドレスへ、気軽に連絡してください。</p>
+  </div>
+</section>
+
+<section class="block tint support" id="support">
+  <div class="shell support-inner">
+    <div>
+      <p class="label">SUPPORT</p>
+      <h2>研究助成</h2>
+      <p>本研究室の研究の一部は、公益財団法人JKAの補助を受けて実施しています。</p>
+    </div>
+    <a class="support-banner" href="https://www.jka-cycle.jp" target="_blank" rel="noopener">
+      <img src="{{ '/assets/img/jka-banner.png' | relative_url }}" width="234" height="60" alt="JKA Social Action 競輪とオートレースの補助事業">
+    </a>
+  </div>
+</section>

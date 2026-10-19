@@ -1,0 +1,39 @@
+# ===== サイト全体の設定 =====
+title: 画像情報処理システム研究室
+title_en: Image Information Processing Systems Lab
+subtitle: 宮崎研究室
+subtitle_en: Miyazaki Lab
+description: 神奈川工科大学 情報学部 情報工学科 画像情報処理システム研究室（宮崎研究室）。画像情報処理と人工知能による、聴覚障がい者のコミュニケーション支援や社会課題の解決に取り組んでいます。
+description_en: Image Information Processing Systems Lab (Miyazaki Lab), Department of Information Engineering, Kanagawa Institute of Technology. We apply image processing and AI to communication support for people with hearing impairments and to social challenges.
+author: 宮崎 剛
+lang: ja
+
+# 公開URL（独自ドメインを取得したら変更します）
+url: "https://myz-lab.github.io"
+baseurl: ""
+
+dokuwa_club: "https://sites.google.com/view/dokuwaclub/"
+
+# 連絡先・外部リンク（空欄の項目はフッターに表示されません）
+email: "miyazaki [at] ic.kanagawa-it.ac.jp"
+researchmap: "https://researchmap.jp/miyazaki.tsuyoshi"
+orcid: ""              # 例: https://orcid.org/0000-0000-0000-0000
+github: "https://github.com/myz-lab"
+university_page: "https://www.kait.jp/research/navi/miyazaki.html"
+address: 〒243-0292 神奈川県厚木市下荻野1030 神奈川工科大学
+address_en: 1030 Shimo-ogino, Atsugi, Kanagawa 243-0292, Japan
+
+# ===== ビルド設定（通常は変更不要） =====
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+feed:
+  path: news/feed.xml
+permalink: /news/:year/:month/:day/:title/
+timezone: Asia/Tokyo
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

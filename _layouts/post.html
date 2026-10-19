@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="page-head">
+  <div class="shell">
+    <p class="label">NEWS</p>
+    <h1>{{ page.title }}</h1>
+    <p><time datetime="{{ page.date | date_to_xmlschema }}">{% if page.date_display == "month" %}{{ page.date | date: "%Y/%m" }}{% else %}{{ page.date | date: "%Y/%m/%d" }}{% endif %}</time>{% if page.category_label %}　{{ page.category_label }}{% endif %}</p>
+  </div>
+</div>
+
+<div class="shell page-body"><article class="article">
+  {{ content }}
+  <p class="back"><a class="text-link" href="{{ '/news/' | relative_url }}">ニュース一覧</a></p>
+</article></div>
